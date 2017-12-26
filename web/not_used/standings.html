@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <script src="angular.min.js"></script>
+    <script src="angular-route.js"></script>
+    <script src="HomeController.js"></script>
+    <script src="angular-filter.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body ng-controller="HomeController">
+
+
+
+	<ul class="nav nav-tabs nav-justified" style="cursor: pointer; background: #E8E8EE; color:red; border-bottom: 1px solid red;">
+  		<li class="nav-item">
+    		<a class="nav-link" ng-click="switchTab('overall')" ng-class="{active: activeTab === 'overall'}">Overall Table</a>
+  		</li>
+  		<li class="nav-item">
+    		<a class="nav-link" ng-click="switchTab('home')" ng-class="{active: activeTab === 'home'}">Home Table</a>
+  		</li>
+  		<li class="nav-item">
+    		<a class="nav-link" ng-click="switchTab('away')" ng-class="{active: activeTab === 'away'}">Away Table</a>
+  		</li>
+	</ul>
+	
+	<div ng-repeat="item in league | limitTo:1" style="border-bottom: 5px solid red; text-align: left; font-weight: bold; padding: 5px; margin-bottom: 3px; margin-top: 3px">{{item.country_name}} <color style="color: red;">|</color> {{item.league_name}}
+	</div>
+	<div class="tab-content">
+  	<div class="tab-pane active" id='overall' ng-show="activeTab === 'overall'">
+  	
+  		<table class="table table-bordered table-hover">
+  			<thead style="background: #FFBE0F">
+    			<tr>
+      				<th scope="col">#</th>
+      				<th scope="col">Team Name</th>
+      				<th scope="col">Played</th>
+      				<th scope="col">W</th>
+      				<th scope="col">D</th>
+      				<th scope="col">L</th>
+      				<th scope="col">GF</th>
+      				<th scope="col">GA</th>
+      				<th scope="col">GD</th>
+      				<th scope="col">PTS</th>
+    			</tr>
+  			</thead>
+  			<tbody ng-repeat="item in league | orderBy:'overall_league_position/1'">
+    			<tr>
+      				<th scope="row">{{item.overall_league_position}}</th>
+      				<td style="font-style: italic;">{{item.team_name}}</td>
+      				<td>{{item.overall_league_payed}}</td>
+      				<td>{{item.overall_league_W}}</td>
+      				<td>{{item.overall_league_D}}</td>
+      				<td>{{item.overall_league_L}}</td>
+      				<td>{{item.overall_league_GF}}</td>
+      				<td>{{item.overall_league_GA}}</td>
+      				<td>{{item.overall_league_GF - item.overall_league_GA}}</td>
+      				<td>{{item.overall_league_PTS}}</td>
+    			</tr>
+   			</tbody>
+		</table>
+	</div>
+  
+
+  	<div class="tab-pane active" id="home" ng-show="activeTab === 'home'">
+  	
+  		<table class="table table-bordered table-hover">
+  			<thead style="background: #FFBE0F">
+    			<tr>
+      				<th scope="col">#</th>
+      				<th scope="col">Team Name</th>
+      				<th scope="col">Played</th>
+      				<th scope="col">W</th>
+      				<th scope="col">D</th>
+      				<th scope="col">L</th>
+      				<th scope="col">GF</th>
+      				<th scope="col">GA</th>
+      				<th scope="col">GD</th>
+      				<th scope="col">PTS</th>
+    			</tr>
+  			</thead>
+  			<tbody ng-repeat="item in league | orderBy:'home_league_position/1'">
+    			<tr>
+      				<th scope="row">{{item.home_league_position}}</th>
+      				<td style="font-style: italic;">{{item.team_name}}</td>
+      				<td>{{item.home_league_payed}}</td>
+      				<td>{{item.home_league_W}}</td>
+      				<td>{{item.home_league_D}}</td>
+      				<td>{{item.home_league_L}}</td>
+      				<td>{{item.home_league_GF}}</td>
+      				<td>{{item.home_league_GA}}</td>
+      				<td>{{item.home_league_GF - item.home_league_GA}}</td>
+      				<td>{{item.home_league_PTS}}</td>
+    			</tr>
+   			</tbody>
+		</table>
+	</div>
+	</div>
+  
+
+  	<div class="tab-pane active" id="away" ng-show="activeTab === 'away'">
+  
+  		<table class="table table-bordered table-hover">
+  			<thead style="background: #FFBE0F">
+    			<tr>
+      				<th scope="col">#</th>
+      				<th scope="col">Team Name</th>
+      				<th scope="col">Played</th>
+      				<th scope="col">W</th>
+      				<th scope="col">D</th>
+      				<th scope="col">L</th>
+      				<th scope="col">GF</th>
+      				<th scope="col">GA</th>
+      				<th scope="col">GD</th>
+      				<th scope="col">PTS</th>
+    			</tr>
+  			</thead>
+  			<tbody ng-repeat="item in league | orderBy:'away_league_position/1'">
+    			<tr>
+      				<th scope="row">{{item.away_league_position}}</th>
+      				<td style="font-style: italic;">{{item.team_name}}</td>
+      				<td>{{item.away_league_payed}}</td>
+      				<td>{{item.away_league_W}}</td>
+      				<td>{{item.away_league_D}}</td>
+      				<td>{{item.away_league_L}}</td>
+      				<td>{{item.away_league_GF}}</td>
+      				<td>{{item.away_league_GA}}</td>
+      				<td>{{item.away_league_GF - item.away_league_GA}}</td>
+      				<td>{{item.away_league_PTS}}</td>
+    			</tr>
+   			</tbody>
+		</table>
+	</div>
+	</div>
+
+</body>
+</html>
+

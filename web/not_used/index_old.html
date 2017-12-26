@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+        <script src="https://use.fontawesome.com/2a2a90c050.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="custom.css">
+
+    </head>
+    <body ng-controller="HomeController">
+        <div id="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div style="width: 100%;">  
+                        <!--<nav class="navbar navbar-expand-sm justify-content-center" style="background: #E8E8EE; width: 100%; ">-->
+                        <!--<ul class="navbar-nav">-->
+                        <!--<li class="nav-item">-->
+                        <!--<a class="nav-link" ng-href="#!">ALL MATCHES</a>-->
+                        <!--</li>-->
+                        <!--<li class="nav-item">-->
+                        <!--<a class="nav-link" ng-href="#!live">LIVE</a>-->
+                        <!--</li>-->
+                        <!--<li class="nav-item">-->
+                        <!--<a class="nav-link" ng-href="#!finished">FINISHED</a>-->
+                        <!--</li>-->
+                        <!--<li class="nav-item">-->
+                        <!--<a class="nav-link" ng-href="#!upcoming">SCHEDULE</a>-->
+                        <!--</li>-->
+                        <!--</ul>-->
+                        <!--</nav>-->
+
+                        <!--<div ng-view></div>-->
+                        <div class="sport_name">Soccer</div></br>
+                        <div style="text-align: right;">
+                            <select ng-options="date.value for date in datesArray track by date.key" ng-model="filterCondition" ng-change="selectDate()">
+
+                            </select>
+                        </div>
+                        <div ng-repeat="(country_name, value) in content | groupBy: 'country_name'">
+                            <div ng-repeat="(league_name, value1) in value | groupBy: 'league_name'">
+                                <div style="border-bottom: 1px solid red; text-align: left; font-weight: bold; padding: 5px; margin-bottom: 3px;">{{country_name}}
+                                    <color style="color: green;">|</color> {{league_name}}
+                                    <button class="btn btn-info btn-xs pull-right" ng-repeat="match in value1| limitTo:1"
+                                            ng-repeat="match in value1| limitTo:1" ng-click="toggleModal('league'); showLeague(match.league_id);" >Show League</button>
+                                </div>
+                                <div  ng-repeat="(match_date, value2) in value1 | groupBy: 'match_date'">
+                                    <div class="p-2" style="border-bottom: 1px solid red; font-style: italic;">{{match_date}}</div>
+                                    <div ng-repeat="items in value2">
+                                        <div>
+                                            <div class="d-flex justify-content-between" id="stripes3" class="pattern">
+                                                <p class="p-2" style="border-right: 1px solid red; font-weight: bold;">{{items.match_time}}</p>
+                                                <p class="p-2" style="align-content: left; font-style: italic;">{{items.match_hometeam_name}} - {{items.match_awayteam_name}}</p>
+
+                                                <p class="p-2" style="font-family: 'Oswald', sans-serif;">{{items.match_hometeam_score}} : {{items.match_awayteam_score}} ({{items.match_hometeam_halftime_score}} - {{items.match_awayteam_halftime_score}})</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+    <modal-dialog show="league_active" width="70%" height="80%">
+
+        <div class="custom-header">
+            <a href="#"><img src="http://redwin.bet/Layout/Web/images/assets/LOGO%20REDWIN%202@3x.png"></a>
+            <h3>live scores</h3>
+        </div>
+        <div>
+            <div class="custom-navbar" style="cursor: pointer;">
+                <ul class="menu">
+                    <li class="nav-item">
+                        <a class="nav-link" ng-click="switchMainTab('all')" ng-class="{active: activeMainTab === 'all'}">ALL MATCHES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" ng-click="switchMainTab('live')" ng-class="{active: activeMainTab === 'live'}">LIVE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" ng-click="switchMainTab('finished')" ng-class="{active: activeMainTab === 'finished'}">FINISHED</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" ng-click="switchMainTab('schedule')" ng-class="{active: activeMainTab === 'schedule'}">SCHEDULE</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="custom-content" ng-scrollbar>
+                <div>
+                    <!--<nav class="navbar navbar-expand-sm justify-content-center" style="background: #E8E8EE; width: 100%; ">-->
+                    <!--<ul class="navbar-nav">-->
+                    <!--<li class="nav-item">-->
+                    <!--<a class="nav-link" ng-href="#!">ALL MATCHES</a>-->
+                    <!--</li>-->
+                    <!--<li class="nav-item">-->
+                    <!--<a class="nav-link" ng-href="#!live">LIVE</a>-->
+                    <!--</li>-->
+                    <!--<li class="nav-item">-->
+                    <!--<a class="nav-link" ng-href="#!finished">FINISHED</a>-->
+                    <!--</li>-->
+                    <!--<li class="nav-item">-->
+                    <!--<a class="nav-link" ng-href="#!upcoming">SCHEDULE</a>-->
+                    <!--</li>-->
+                    <!--</ul>-->
+                    <!--</nav>-->
+
+
+                    <span ng-if="!activeStanding">
+                        <div class="tab-pane active" id='all' ng-show="activeMainTab === 'all'">
+                            <div style="text-align: left; font-weight: bold; border-bottom: 4px solid red; padding: 5px;">
+                                <h4>SOCCER</h4>
+                            </div>
+                            <div ng-repeat="(country_name, value) in leagues | groupBy: 'country_name'">
+                                <div ng-repeat="(league_name, value1) in value | groupBy: 'league_name'">
+                                    <div style="border-bottom: 1px solid red; text-align: left; font-weight: bold; padding: 5px; margin-bottom: 3px;">{{country_name}}
+                                        <color style="color: green;">|</color> {{league_name}}
+                                        <!--<a ng-repeat="match in value1 | limitTo:1" href="#!standings/{{match.league_id}}"></a>-->
+                                        <button class="btn btn-info btn-xs pull-right" ng-repeat="match in value1| limitTo:1" ng-click="showStandings(match.league_id);">Standings</button>
+                                    </div>
+                                    <div  ng-repeat="(match_date, value2) in value1 | groupBy: 'match_date'">
+                                        <div class="date-header">{{match_date}}</div>
+                                        <div class="table-responsive" ng-repeat="items in value2">
+                                            <table class="table table-bordered table-striped table-hover table-condensed text-center">
+                                                <tbody>
+                                                    <tr class="row">
+                                                        <td class="col-md-3">{{items.match_time}}</td>
+                                                        <td class="col-md-6">{{items.match_hometeam_name}} - {{items.match_awayteam_name}}</td>
+                                                        <td class="col-md-3">{{items.match_hometeam_score}} : {{items.match_awayteam_score}} ({{items.match_hometeam_halftime_score}} - {{items.match_awayteam_halftime_score}})</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane active" id='live' ng-show="activeMainTab === 'live'">
+                            <div style="text-align: left; font-weight: bold; border-bottom: 4px solid red; padding: 5px;">
+                                <h4>SOCCER</h4>
+                            </div>
+                            <div ng-repeat="(country_name, value) in leagues | groupBy: 'country_name'">
+                                <div ng-repeat="(league_name, value1) in value | groupBy: 'league_name'">
+                                    <div style="border-bottom: 1px solid red; text-align: left; font-weight: bold; padding: 5px; margin-bottom: 3px;">{{country_name}}
+                                        <color style="color: green;">|</color> {{league_name}}
+                                        <!--<a ng-repeat="match in value1 | limitTo:1" href="#!standings/{{match.league_id}}"></a>-->
+                                        <button class="btn btn-info btn-xs pull-right" ng-repeat="match in value1| limitTo:1" ng-click="showStandings(match.league_id);">Standings</button>
+                                    </div>
+                                    <div  ng-repeat="(match_date, value2) in value1 | filter:match_status = '!FT' | groupBy: 'match_date'">
+                                        <div class="date-header">{{match_date}}</div>
+                                        <div class="table-responsive" ng-repeat="items in value2">
+                                            <table class="table table-bordered table-striped table-hover table-condensed text-center">
+                                                <tbody>
+                                                    <tr class="row">
+                                                        <td class="col-md-3">{{items.match_time}}</td>
+                                                        <td class="col-md-6">{{items.match_hometeam_name}} - {{items.match_awayteam_name}}</td>
+                                                        <td class="col-md-3">{{items.match_hometeam_score}} : {{items.match_awayteam_score}} ({{items.match_hometeam_halftime_score}} - {{items.match_awayteam_halftime_score}})</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane active" id='finished' ng-show="activeMainTab === 'finished'">
+                            <div style="text-align: left; font-weight: bold; border-bottom: 4px solid red; padding: 5px;">
+                                <h4>SOCCER</h4>
+                            </div>
+                            <div ng-repeat="(country_name, value) in leagues | groupBy: 'country_name'">
+                                <div ng-repeat="(league_name, value1) in value | groupBy: 'league_name'">
+                                    <div style="border-bottom: 1px solid red; text-align: left; font-weight: bold; padding: 5px; margin-bottom: 3px;">{{country_name}}
+                                        <color style="color: green;">|</color> {{league_name}}
+                                        <!--<a ng-repeat="match in value1 | limitTo:1" href="#!standings/{{match.league_id}}"></a>-->
+                                        <button class="btn btn-info btn-xs pull-right" ng-repeat="match in value1| limitTo:1" ng-click="showStandings(match.league_id);">Standings</button>
+                                    </div>
+                                    <div  ng-repeat="(match_date, value2) in value1 | filter:match_status = 'FT' | groupBy: 'match_date'">
+                                        <div class="date-header">{{match_date}}</div>
+                                        <div class="table-responsive" ng-repeat="items in value2">
+                                            <table class="table table-bordered table-striped table-hover table-condensed text-center">
+                                                <tbody>
+                                                    <tr class="row">
+                                                        <td class="col-md-3">{{items.match_time}}</td>
+                                                        <td class="col-md-6">{{items.match_hometeam_name}} - {{items.match_awayteam_name}}</td>
+                                                        <td class="col-md-3">{{items.match_hometeam_score}} : {{items.match_awayteam_score}} ({{items.match_hometeam_halftime_score}} - {{items.match_awayteam_halftime_score}})</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane active" id='schedule' ng-show="activeMainTab === 'schedule'">
+                            <div style="text-align: left; font-weight: bold; border-bottom: 4px solid red; padding: 5px;">
+                                <h4>SOCCER</h4>
+                            </div>
+                            <div ng-repeat="(country_name, value) in leagues | groupBy: 'country_name'">
+                                <div ng-repeat="(league_name, value1) in value | groupBy: 'league_name'">
+                                    <div style="border-bottom: 1px solid red; text-align: left; font-weight: bold; padding: 5px; margin-bottom: 3px;">{{country_name}}
+                                        <color style="color: green;">|</color> {{league_name}}
+                                        <!--<a ng-repeat="match in value1 | limitTo:1" href="#!standings/{{match.league_id}}"></a>-->
+                                        <button class="btn btn-info btn-xs pull-right" ng-repeat="match in value1| limitTo:1" ng-click="showStandings(match.league_id);">Standings</button>
+                                    </div>
+                                    <div  ng-repeat="(match_date, value2) in value1 | filterBy: ['match_live']: 0 | groupBy: 'match_date'">
+                                        <div class="date-header">{{match_date}}</div>
+                                        <div class="table-responsive" ng-repeat="items in value2">
+                                            <table class="table table-bordered table-striped table-hover table-condensed text-center">
+                                                <tbody>
+                                                    <tr class="row">
+                                                        <td class="col-md-3">{{items.match_time}}</td>
+                                                        <td class="col-md-6">{{items.match_hometeam_name}} - {{items.match_awayteam_name}}</td>
+                                                        <td class="col-md-3">{{items.match_hometeam_score}} : {{items.match_awayteam_score}} ({{items.match_hometeam_halftime_score}} - {{items.match_awayteam_halftime_score}})</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </div>
+
+
+            <span ng-if="activeStanding">
+                <ul class="nav nav-tabs nav-justified" style="cursor: pointer; background: #E8E8EE; color:red; border-bottom: 1px solid red;">
+                    <li class="nav-item">
+                        <a class="nav-link" ng-click="switchTab('overall')" ng-class="{active: activeTab === 'overall'}">Overall Table</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" ng-click="switchTab('home')" ng-class="{active: activeTab === 'home'}">Home Table</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" ng-click="switchTab('away')" ng-class="{active: activeTab === 'away'}">Away Table</a>
+                    </li>
+                </ul>
+
+                <div ng-repeat="item in standings| limitTo:1" style="border-bottom: 5px solid red; text-align: left; font-weight: bold; padding: 5px; margin-bottom: 3px; margin-top: 3px">{{item.country_name}} <color style="color: red;">|</color> {{item.league_name}}
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id='overall' ng-show="activeTab === 'overall'">
+
+                        <table class="table table-bordered table-hover">
+                            <thead style="background: #FFBE0F">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Team Name</th>
+                                    <th scope="col">Played</th>
+                                    <th scope="col">W</th>
+                                    <th scope="col">D</th>
+                                    <th scope="col">L</th>
+                                    <th scope="col">GF</th>
+                                    <th scope="col">GA</th>
+                                    <th scope="col">GD</th>
+                                    <th scope="col">PTS</th>
+                                </tr>
+                            </thead>
+                            <tbody ng-repeat="item in standings| orderBy:'overall_league_position/1'">
+                                <tr>
+                                    <th scope="row">{{item.overall_league_position}}</th>
+                                    <td style="font-style: italic;">{{item.team_name}}</td>
+                                    <td>{{item.overall_league_payed}}</td>
+                                    <td>{{item.overall_league_W}}</td>
+                                    <td>{{item.overall_league_D}}</td>
+                                    <td>{{item.overall_league_L}}</td>
+                                    <td>{{item.overall_league_GF}}</td>
+                                    <td>{{item.overall_league_GA}}</td>
+                                    <td>{{item.overall_league_GF - item.overall_league_GA}}</td>
+                                    <td>{{item.overall_league_PTS}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                    <div class="tab-pane active" id="home" ng-show="activeTab === 'home'">
+
+                        <table class="table table-bordered table-hover">
+                            <thead style="background: #FFBE0F">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Team Name</th>
+                                    <th scope="col">Played</th>
+                                    <th scope="col">W</th>
+                                    <th scope="col">D</th>
+                                    <th scope="col">L</th>
+                                    <th scope="col">GF</th>
+                                    <th scope="col">GA</th>
+                                    <th scope="col">GD</th>
+                                    <th scope="col">PTS</th>
+                                </tr>
+                            </thead>
+                            <tbody ng-repeat="item in standings| orderBy:'home_league_position/1'">
+                                <tr>
+                                    <th scope="row">{{item.home_league_position}}</th>
+                                    <td style="font-style: italic;">{{item.team_name}}</td>
+                                    <td>{{item.home_league_payed}}</td>
+                                    <td>{{item.home_league_W}}</td>
+                                    <td>{{item.home_league_D}}</td>
+                                    <td>{{item.home_league_L}}</td>
+                                    <td>{{item.home_league_GF}}</td>
+                                    <td>{{item.home_league_GA}}</td>
+                                    <td>{{item.home_league_GF - item.home_league_GA}}</td>
+                                    <td>{{item.home_league_PTS}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+    
+
+
+                    <div class="tab-pane active" id="away" ng-show="activeTab === 'away'">
+
+                        <table class="table table-bordered table-hover">
+                            <thead style="background: #FFBE0F">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Team Name</th>
+                                    <th scope="col">Played</th>
+                                    <th scope="col">W</th>
+                                    <th scope="col">D</th>
+                                    <th scope="col">L</th>
+                                    <th scope="col">GF</th>
+                                    <th scope="col">GA</th>
+                                    <th scope="col">GD</th>
+                                    <th scope="col">PTS</th>
+                                </tr>
+                            </thead>
+                            <tbody ng-repeat="item in standings| orderBy:'away_league_position/1'">
+                                <tr>
+                                    <th scope="row">{{item.away_league_position}}</th>
+                                    <td style="font-style: italic;">{{item.team_name}}</td>
+                                    <td>{{item.away_league_payed}}</td>
+                                    <td>{{item.away_league_W}}</td>
+                                    <td>{{item.away_league_D}}</td>
+                                    <td>{{item.away_league_L}}</td>
+                                    <td>{{item.away_league_GF}}</td>
+                                    <td>{{item.away_league_GA}}</td>
+                                    <td>{{item.away_league_GF - item.away_league_GA}}</td>
+                                    <td>{{item.away_league_PTS}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </span>
+        </div>
+        <div class="text-center" >
+            <button class="btn btn-warning text-center" style="position:relative; margin-top: 35px; margin-bottom: 15px" ng-click="close()">Close</button>
+        </div>
+
+
+    </modal-dialog>
+
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <script src="angular.min.js"></script>
+    <script src="angular-route.js"></script>
+
+    <script src="angular-filter.js"></script>
+    <script src="HomeController.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+    <script src="custom.js"></script>
+
+
+</body>
+</html>

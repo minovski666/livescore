@@ -1,0 +1,68 @@
+<div class="page">
+    <!-- Main Navbar-->
+    <header class="header">
+        <nav class="navbar">
+            <!-- Search Box-->
+            <div class="search-box">
+                <button class="dismiss"><i class="icon-close"></i></button>
+                <form id="searchForm" action="#" role="search">
+                    <input type="search" placeholder="What are you looking for..." class="form-control">
+                </form>
+            </div>
+            <div class="container-fluid">
+                <div class="navbar-holder d-flex align-items-center justify-content-between">
+                    <!-- Navbar Header-->
+                    <div class="navbar-header">
+                        <!-- Navbar Brand --><a href="#/admin" class="navbar-brand">
+                            <div class="brand-text brand-big"><span></span><strong> Dashboard</strong></div>
+                            <div class="brand-text brand-small"><strong>LS</strong></div></a>
+                        <!-- Toggle Button--><a id="toggle-btn" href="#/admin" class="menu-btn active"><span></span><span></span><span></span></a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="page-content d-flex align-items-stretch"> 
+        <!-- Side Navbar -->
+        <nav class="side-navbar">
+            <!-- Sidebar Header-->
+            <div class="sidebar-header d-flex align-items-center">
+                <div class="title">
+                    <h1 class="h4">iSoftGaming</h1>
+                    <p>Live Scores</p>
+                </div>
+            </div>
+            <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
+            <ul class="list-unstyled">
+                <li class="active"><a href="#!/admin/dashboard"> <i class="fas fa-globe"></i> Dashboard </a></li>
+                <li><a href="#!/admin/countries"> <i class="fas fa-globe"></i> Countries </a></li>
+                <li><a href="#!/admin/leagues"> <i class="fas fa-flag"></i> Leagues </a></li>
+                <li><a href="#!/admin/matches"> <i class="far fa-futbol"></i> Matches </a></li>
+                <li><a href="#!/admin/live-matches"> <i class="fas fa-play-circle"></i> Live Matches </a></li>
+
+            </ul>
+
+        </nav>
+        <div class="content-inner">
+            <div ui-view="main"></div>
+
+
+            <!-- Page Footer-->
+            <footer class="main-footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p>iSoftGaming &copy; 2017-2019</p>
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            <p>Design by <a href="https://bootstrapious.com/admin-templates" class="external">Bootstrapious</a></p>
+                            <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,444 @@
+# Webalizer V2.23-08 Incremental Data - 12/20/2017 16:06:47
+2017 12 20 16 6 47
+20413 17502 25 89 16 18 381855277 7360 86 0 0 0
+3 77 1403 1 20
+75 73 598730 6 51 6 0 0
+8 8 107971 2 3 2 0 0
+2 2 8683 1 1 1 0 0
+127 119 4398855 7 76 6 0 0
+2 2 8684 2 1 1 0 0
+17 17 137879 4 10 3 0 0
+18 18 157882 2 10 4 0 0
+8 8 102603 3 3 2 0 0
+0 0 0 0 0 0 0 0
+2 2 9753 1 1 1 0 0
+5 5 21546 3 3 3 0 0
+37 33 344624 3 14 2 0 0
+226 220 1329386 6 139 10 0 0
+4554 3791 159567478 4 1307 4 0 0
+4229 3782 36318554 3 1944 4 0 0
+2 1 2900 2 1 1 0 0
+253 211 15456633 3 80 2 0 0
+3114 2049 81359522 7 1020 14 0 0
+2792 2611 32602332 7 989 15 0 0
+4942 4550 49321262 3 1707 5 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+2 2 8683 1 0 0
+30 26 332591 10 0 0
+1986 1818 24282727 540 0 0
+1435 1315 17939705 634 0 0
+2622 2383 31460042 1010 0 0
+1809 1350 11175149 760 0 0
+2014 1666 16327112 902 0 0
+2399 2017 62474541 1093 0 0
+2383 2055 46781950 712 0 0
+2483 2245 65175050 556 0 0
+1288 1116 33001330 442 0 0
+355 268 11836246 135 0 0
+1004 755 35814088 364 0 0
+601 484 25236310 200 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+2 2 9753 1 0 0
+0 0 0 0 0 0
+0
+0
+0
+17502
+0
+0
+0
+0
+0
+4
+0
+2
+5
+0
+433
+0
+0
+0
+0
+0
+0
+2465
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+2
+0
+0
+0
+0
+0
+# -urls- 
+/components/admin/partials/dashboard.html
+0 18 0 28351 0 0 0 0
+/includes/api/get_standings.php
+0 304 0 520872 0 3 0 0
+/components/admin/adminController.js
+0 287 0 199702 0 0 0 0
+/assets/libs/ui-bootstrap-2.5.0.js
+0 582 0 55425307 0 0 0 0
+/phpmyadmin/
+0 43 0 103750 0 1 0 0
+/components/admin/adminView.html
+0 82 0 217450 1 0 0 0
+/assets/libs/jquery-3.2.1.js
+0 584 0 64399311 0 0 0 0
+/assets/libs/bootstrap-4.0.0/css/bootstrap.css.map
+0 57 0 2974520 0 0 0 0
+/assets/libs/angular/angular-route-1.6.7.js
+0 389 0 10343902 0 0 0 0
+/includes/api/insert_matches.php
+0 7 0 2334 3 0 0 0
+/live.html
+0 7 0 6292 0 1 0 0
+/assets/libs/angular/angular-1.6.6.min.js
+0 648 0 50275499 0 0 0 0
+/test.html
+0 9 0 25038 0 0 0 0
+/assets/css/material-admin/style.sea.css
+0 307 0 2966797 0 0 0 0
+/custom.js
+0 22 0 13102 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/logo_left.png
+1 4 0 10241 0 0 0 0
+/select_scores.php
+0 230 0 2624768 4 6 0 0
+/phpmyadmin/themes/pmahomme/img/arrow_ltr.png
+1 4 0 1686 0 0 0 0
+/phpmyadmin/tbl_sql.php
+0 1 0 9747 0 0 0 0
+/assets/css/material-admin/style.default.css
+0 12 0 115921 0 0 0 0
+/phpmyadmin/js/get_image.js.php
+0 4 0 26676 0 0 0 0
+/includes/api/select_matches.php
+0 14 0 202384 0 0 0 0
+/includes/api/select_score.php
+0 9 0 2016 0 0 0 0
+/app.module.js
+0 616 0 417108 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/col_drop.png
+1 4 0 1656 0 0 0 0
+/phpmyadmin/navigation.php
+0 9 0 53123 0 0 0 0
+/assets/libs/bootstrap-4.0.0/css/bootstrap.css
+0 653 0 36341970 0 0 0 0
+/finished.html
+0 6 0 5348 0 1 0 0
+/angular-route.js
+0 34 0 415466 0 0 0 0
+/favicon.ico
+0 97 0 742525 0 0 0 0
+/includes/api/get_countries.php
+0 245 0 374566 1 2 0 0
+/includes/api/get_league.php
+0 18 0 86770 0 0 0 0
+/app.service.js
+0 503 0 451322 0 0 0 0
+/includes/api/get_statistics.php
+0 585 0 326931 0 4 0 0
+/includes/api/get_all_matches.php
+0 1186 0 9226419 1 2 0 0
+/assets/libs/tether-1.3.3/js/tether.min.js
+0 626 0 7795291 0 0 0 0
+/select_score.php
+0 35 0 54542 1 0 0 0
+/includes/api/get_matches.php
+0 7 0 101192 0 0 0 0
+/assets/css/material-admin/style.blue.css
+0 1 0 9665 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/col_pointer.png
+1 4 0 1580 0 0 0 0
+/custom.css
+0 28 0 35371 0 0 0 0
+/phpmyadmin/themes/pmahomme/jquery/jquery-ui-1.9.2.custom.css
+0 4 0 26056 0 0 0 0
+/angular-filter.js
+0 33 0 471592 0 0 0 0
+/components/admin/partials/countries.html
+0 33 0 35078 0 0 0 0
+/phpmyadmin/js/get_scripts.js.php
+0 18 0 6913580 0 0 0 0
+/select_standings.php
+0 30 0 36010 0 3 0 0
+/assets/libs/tether-1.3.3/css/tether.min.css
+0 625 0 300427 0 0 0 0
+/HomeController.js
+0 43 0 73442 0 0 0 0
+/components/backup/backUp.html
+0 1 0 2325 0 0 0 0
+/includes/api/get_league_matches.php
+0 717 0 2993206 1 1 0 0
+/components/home/homeService.js
+0 65 0 54848 0 0 0 0
+/phpmyadmin/tbl_import.php
+0 1 0 18492 0 0 0 0
+/phpmyadmin/js/messages.php
+0 10 0 172247 0 0 0 0
+/includes/api/select_scores.php
+0 57 0 780512 1 0 0 0
+/includes/api/get_all_matches_admin.php
+0 222 0 53905302 5 2 0 0
+/phpmyadmin/db_sql.php
+0 2 0 11034 0 0 0 0
+/upcoming.html
+0 5 0 4411 0 0 0 0
+/phpmyadmin/favicon.ico
+0 3 0 57610 0 0 0 0
+/phpmyadmin/db_structure.php
+0 4 0 92849 0 0 0 0
+/phpmyadmin/sql.php
+0 30 0 2500223 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/ajax_clock_small.gif
+1 4 0 8376 0 0 0 0
+/assets/css/material-admin/custom.css
+0 320 0 94180 0 0 0 0
+/assets/css/fontawesome-all-5.0.1.min.css
+0 234 0 6052667 0 0 0 0
+/assets/libs/bootstrap-4.0.0/js/bootstrap.js
+0 651 0 23612462 0 0 0 0
+/components/admin/partials/leagues.html
+0 12 0 10138 0 0 0 0
+/phpmyadmin/phpmyadmin.css.php
+0 10 0 176241 0 0 0 0
+/standings.html
+0 4 0 5387 0 0 0 0
+/
+0 1957 0 2042891 56 27 0 0
+/insert_score.php
+0 4 0 1314 1 3 0 0
+/includes/api/get_leagues.php
+0 228 0 3278756 3 2 0 0
+/all.html
+0 27 0 23769 3 3 0 0
+/phpmyadmin/themes/pmahomme/img/logo_right.png
+1 4 0 18308 0 0 0 0
+/components/home/homeView.html
+0 903 0 3054798 3 0 0 0
+/phpmyadmin/tbl_operations.php
+0 8 0 260318 0 0 0 0
+/assets/css/custom.css
+0 1043 0 2346317 0 0 0 0
+/phpmyadmin/themes/dot.gif
+1 4 0 1296 0 0 0 0
+/components/admin/partials/matches.html
+0 16 0 15181 0 0 0 0
+/angular.min.js
+0 35 0 2077749 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/left_nav_bg.png
+1 4 0 2040 0 0 0 0
+/assets/img/oddslead_logo.png
+1 79 0 247436 0 0 0 0
+/phpmyadmin/import.php
+0 10 0 222773 0 0 0 0
+/templates/modal.html
+0 114 0 53388 0 0 0 0
+/components/test/testView.html
+0 11 0 69946 0 0 0 0
+/assets/libs/angular/angular-filter-0.5.17.js
+0 605 0 14868453 0 0 0 0
+/phpmyadmin/db_import.php
+0 1 0 16017 0 0 0 0
+/app.routes.js
+0 638 0 466232 0 0 0 0
+/components/home/homeController.js
+0 821 0 1998134 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/s_fulltext.png
+1 4 0 1817 0 0 0 0
+/phpmyadmin/themes/pmahomme/img/sprites.png
+1 4 0 154956 0 0 0 0
+# End Of Table - urls
+# -sites- (monthly)
+94.65.145.94
+0 15 13 123519 1 1512116456 0 0
+/
+178.128.117.132
+0 79 70 990433 2 1513675419 0 0
+/includes/api/get_standings.php
+92.53.46.153
+0 1147 1042 14430108 2 1513251444 0 0
+/select_scores.php
+66.249.93.60
+0 23 19 86386 11 1513444960 0 0
+/
+94.71.145.35
+0 41 41 325552 2 1512134166 0 0
+/select_scores.php
+79.129.2.221
+0 241 227 5520285 12 1513690826 0 0
+/components/home/homeView.html
+92.53.29.34
+0 3405 2749 145128973 1 1513279602 0 0
+/includes/api/get_league_matches.php
+92.53.46.140
+0 4226 3783 36313557 3 1513355620 0 0
+-
+104.45.18.178
+0 14 11 67139 6 1513680660 0 0
+/includes/api/insert_matches.php
+66.249.81.122
+0 4 4 86710 0 0 0 0
+-
+66.249.93.56
+0 15 11 47996 7 1513764595 0 0
+/
+66.249.81.124
+0 1 1 1025 1 1512377805 0 0
+/
+40.74.255.63
+0 1 1 310 1 1513160780 0 0
+/
+66.249.88.44
+0 1 1 1025 1 1512376142 0 0
+/
+92.53.46.164
+0 4940 4549 49318262 4 1513786007 0 0
+/includes/api/get_statistics.php
+66.249.81.120
+0 3 3 20238 1 1512377806 0 0
+/select_scores.php
+54.193.46.142
+0 1 1 2039 1 1513016014 0 0
+/
+92.53.46.231
+0 199 194 1189870 4 1513182258 0 0
+/
+66.249.93.58
+0 7 4 23308 2 1513671642 0 0
+/
+188.4.113.2
+0 19 19 212243 2 1512744437 0 0
+/select_scores.php
+92.53.46.97
+0 2719 2547 31969223 7 1513698589 0 0
+/includes/api/get_standings.php
+92.53.29.132
+0 250 210 15451635 1 1513538398 0 0
+/includes/api/get_league_matches.php
+23.101.61.176
+0 8 6 43311 3 1513677659 0 0
+/includes/api/insert_matches.php
+92.53.46.156
+0 3048 1994 80402842 10 1513612705 0 0
+-
+5.203.58.101
+0 6 6 99288 1 1512215138 0 0
+/select_scores.php
+# End Of Table - sites (monthly)
+# -sites- (daily)
+66.249.93.56
+0 1 1 902 1 1513764595 0 0
+/
+92.53.46.164
+0 4940 4549 49318262 4 1513786007 0 0
+/includes/api/get_statistics.php
+66.249.93.58
+0 1 0 2098 0 0 0 0
+-
+# End Of Table - sites (daily)
+# -referrers- 
+http://livescore.isoftgaming.com/assets/css/fontawesome-all-5.0.1.min.css
+1 6
+http://livescore.isoftgaming.com/phpmyadmin/sql.php
+1 15
+http://livescore.isoftgaming.com/
+1 17234
+http://livescore.isoftgaming.com/components/home/homeController.js
+1 42
+http://livescore.isoftgaming.com/phpmyadmin/db_sql.php
+1 2
+http://livescore.isoftgaming.com/index.html
+1 4
+http://livescore.isoftgaming.com/components/home/homeView.html
+1 27
+http://livescore.isoftgaming.com/assets/css/custom.css
+1 2
+http://livescore.isoftgaming.com/phpmyadmin/index.php
+1 110
+- (Direct Request)
+0 2896
+http://livescore.isoftgaming.com/includes/api/insert_matches.php
+1 1
+http://livescore.isoftgaming.com/includes/api/select_scores.php
+1 1
+http://livescore.isoftgaming.com/phpmyadmin/import.php
+1 9
+http://livescore.isoftgaming.com/phpmyadmin/tbl_operations.php
+1 18
+http://livescore.isoftgaming.com/phpmyadmin/
+1 30
+http://livescore.isoftgaming.com/phpmyadmin/phpmyadmin.css.php
+1 16
+# End Of Table - referrers
+# -agents- 
+Mozilla/5.0 (iPhone; CPU iPhone OS 10_3 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) CriOS/56.0.2924.75 Mobile/14E
+0 2
+Mozilla/5.0 (Windows NT 6.1; WOW64; rv:57.0) Gecko/20100101 Firefox/57.0
+0 90
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2227.0 Safari/537.36
+0 1
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+0 3603
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+0 36
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:57.0) Gecko/20100101 Firefox/57.0
+0 11
+Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36
+0 16449
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.2357.81 Safari/537.36
+0 1
+Mozilla/5.0 (iPad; CPU OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1
+0 31
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/601.2.4 (KHTML, like Gecko) Version/9.0.1 Safari/601.2.4 facebook
+0 4
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36
+0 45
+Mozilla/5.0 (Linux; Android 7.0; SM-G935F Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.84 Mobile Saf
+0 8
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.75 Safari/537.36 Google Favicon
+0 45
+Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_3 like Mac OS X) AppleWebKit/603.3.8 (KHTML, like Gecko) Version/10.0 Mobile/14G60 Sa
+0 11
+Mozilla/5.0 (Windows NT 6.1; WOW64) SkypeUriPreview Preview/0.5
+0 22
+Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36
+0 19
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36
+0 34
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36 Google (+https://dev
+0 1
+# End Of Table - agents
+# -search strings- 
+# End Of Table - search strings
+# -usernames- 
+# End Of Table - usernames
