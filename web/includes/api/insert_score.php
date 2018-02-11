@@ -5,7 +5,7 @@
 
    $time_api_start = microtime(true);   
 
-    $url = "https://apifootball.com/api/?action=get_events&from=2017-11-01&to=2017-12-31&APIkey=3927151cec0255e13d4d440dc5fe9ea5ca1584df169e5c6c7857a862dd01eaed";
+    $url = "https://apifootball.com/api/?action=get_events&from=2018-11-01&to=2018-12-31&APIkey=3927151cec0255e13d4d440dc5fe9ea5ca1584df169e5c6c7857a862dd01eaed";
     //read the json file contents
     $jsondata = file_get_contents($url);
 $time_api_end = microtime(true);
